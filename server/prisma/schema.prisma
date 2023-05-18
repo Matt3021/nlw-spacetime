@@ -9,7 +9,7 @@ datasource db {
 
 model User {
   id        String @id @default(uuid())
-  githybId  Int    @unique
+  githubId  Int    @unique
   name      String
   login     String
   avatarUrl String
@@ -18,9 +18,9 @@ model User {
 }
 
 model Memory {
-  id        String   @id @default(uuid())
-  userId    String
-  
+  id     String @id @default(uuid())
+  userId String
+
   coverUrl  String
   content   String
   isPublic  Boolean  @default(false)
